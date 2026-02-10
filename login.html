@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Login - CHZ EXTERNAL</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+    <!-- Notificaciones -->
+    <div id="notification-container"></div>
+
+    <div class="login-container">
+        <div class="login-box">
+            <!-- Header -->
+            <div class="login-header">
+                <div class="logo-container">
+                    <div class="logo-icon" id="logo-icon"></div>
+                    <h1 class="brand-name">CHZ EXTERNAL</h1>
+                </div>
+                <p class="login-subtitle">Sistema de Autenticação</p>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="login-form">
+                <div class="form-group">
+                    <label for="license-key" class="form-label">
+                        <span class="label-icon" id="key-icon"></span>
+                        Chave de Licença
+                    </label>
+                    <input 
+                        type="text" 
+                        id="license-key" 
+                        class="form-input" 
+                        placeholder="XXXX-XXXX-XXXX-XXXX"
+                        maxlength="19"
+                        required
+                    >
+                    <span class="input-hint">Insira sua chave de licença válida</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">
+                        <span class="label-icon" id="lock-icon"></span>
+                        Senha
+                    </label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        class="form-input" 
+                        placeholder="Digite sua senha"
+                        required
+                    >
+                    <span class="input-hint">Senha fornecida com sua licença</span>
+                </div>
+
+                <button type="submit" class="btn-login" id="login-btn">
+                    <span class="btn-text">Acessar Sistema</span>
+                    <span class="btn-icon" id="arrow-icon"></span>
+                </button>
+            </form>
+
+            <!-- Footer -->
+            <div class="login-footer">
+                <p class="footer-text">Protegido por <strong>CHZ Security</strong></p>
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Sistema Online</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Effects -->
+        <div class="bg-effects">
+            <div class="effect-circle circle-1"></div>
+            <div class="effect-circle circle-2"></div>
+            <div class="effect-circle circle-3"></div>
+        </div>
+    </div>
+
+    <script src="assets/js/icons.js"></script>
+    <script src="assets/js/auth.js"></script>
+</body>
+</html>

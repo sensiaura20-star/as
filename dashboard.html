@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Painel - CHZSENSI</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+
+<!-- Notificaciones -->
+    <div id="notification-container"></div>
+
+    <div class="container">
+        <div class="dashboard-panel">
+            <!-- Navigation Tabs - Sidebar Lateral -->
+            <div class="nav-tabs">
+            <button class="nav-tab active" data-section="aim">
+                <span class="tab-icon" data-icon="aimbot"></span>
+                <span class="tab-indicator"></span>
+            </button>
+            <button class="nav-tab" data-section="optimization">
+                <span class="tab-icon" data-icon="misc"></span>
+                <span class="tab-indicator"></span>
+            </button>
+            <button class="nav-tab" data-section="drag">
+                <span class="tab-icon" data-icon="weapon"></span>
+                <span class="tab-indicator"></span>
+            </button>
+            <button class="nav-tab" data-section="pro">
+                <span class="tab-icon" data-icon="security"></span>
+                <span class="tab-indicator"></span>
+            </button>
+            <button class="nav-tab" data-section="injection">
+                <span class="tab-icon" data-icon="injection"></span>
+                <span class="tab-indicator"></span>
+            </button>
+        </div>
+
+        <!-- Área Principal com Header e Conteúdo -->
+        <div style="flex: 1; display: flex; flex-direction: column;">
+            <!-- Header do Dashboard -->
+            <div class="dashboard-header">
+                <div class="header-left">
+                    <div class="logo-icon" id="header-logo"></div>
+                    <div class="header-info">
+                        <h1 class="header-title">CHZ EXTERNAL</h1>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <button onclick="logout()" class="logout-btn" id="logout-btn">
+                        <span class="logout-icon"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="main-content">
+            <!-- ABA DE MIRA -->
+            <div class="section active" id="aim-section">
+                <div class="section-header">
+                    <div class="section-icon" data-icon="aimbot"></div>
+                    <div class="section-info">
+                        <h2 class="section-title">Controle de Mira</h2>
+                        <p class="section-description">Configure os recursos de precisão e estabilidade</p>
+                    </div>
+                </div>
+                
+                <div class="cards-grid">
+                    <div class="feature-card" style="transform: translateY(0px);">
+                        <div class="card-header">
+                            <div class="card-icon" data-icon="aimbot"></div>
+                            <div class="card-title-area">
+                                <h3 class="card-title">Controle de Recoil</h3>
+                                <p class="card-subtitle">Reduz o recuo da arma</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="recoil-toggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="card-status">
+                            <span class="status-badge">Inteligente</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card" style="transform: translateY(0px);">
+                        <div class="card-header">
+                            <div class="card-icon" data-icon="security"></div>
+                            <div class="card-title-area">
+                                <h3 class="card-title">Aimbot Legit</h3>
+                                <p class="card-subtitle">Melhora o rastreamento</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="focus-toggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="card-status">
+                            <span class="status-badge">Avançado</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card" style="transform: translateY(0px);">
+                        <div class="card-header">
+                            <div class="card-icon" data-icon="weapon"></div>
+                            <div class="card-title-area">
+                                <h3 class="card-title">Precisão Absoluta</h3>
+                                <p class="card-subtitle">Máxima exatidão</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="precision-toggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="card-status">
+                            <span class="status-badge">Premium</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ABA DE OTIMIZAÇÃO -->
+            <div class="section" id="optimization-section">
+                <div class="section-header">
+                    <div class="section-icon" data-icon="misc"></div>
+                    <div class="section-info">
+                        <h2 class="section-title">Otimização de Performance</h2>
+                        <p class="section-description">Maximize o desempenho do sistema</p>
+                    </div>
+                </div>
+                
+                <div class="cards-grid">
+                    <div class="feature-card">
+                        <div class="card-header">
+                            <div class="card-icon" data-icon="misc"></div>
+                            <div class="card-title-area">
+                                <h3 class="card-title">Estabilização de Tela</h3>
+                                <p class="card-subtitle">Reduz trepidação visual</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="screen-toggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="card-status">
+                            <span class="status-badge">Estável</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="card-header">
+                            <div class="card-icon" data-icon="weapon"></div>
+                            <div class="card-title-area">
+                                <h3 class="card-title">Diminuir Input Lag</h3>
+                                <p class="card-subtitle">Resposta instantânea</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="lag-toggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="card-status">
+                            <span class="status-badge">Rápido</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card full-width">
+                        <div class="card-header">
+                            <div class="card-icon" data-icon="security"></div>
+                            <div class="card-title-area">
+                                <h3 class="card-title">Taxa de Hertz</h3>
+                                <p class="card-subtitle">Ajuste a taxa de atualização</p>
+                            </div>
+                            <span class="hertz-display" id="hertz-value">60 Hz</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="range-slider-container">
+                                <input type="range" id="hertz-slider" class="range-slider" min="60" max="144" value="60" step="1">
+                                <div class="range-labels">
+                                    <span>60 Hz</span>
+                                    <span>90 Hz</span>
+                                    <span>120 Hz</span>
+                                    <span>144 Hz</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="card-header">
+                            <div class="card-icon" data-icon="aimbot"></div>
+                            <div class="card-title-area">
+                                <h3 class="card-title">Tirar Delay</h3>
+                                <p class="card-subtitle">Elimina atrasos</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="delay-toggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="card-status">
+                            <span class="status-badge">Zero Delay</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+            <!-- CONTROLE AVANÇADO DE ARRASTO -->
+            <div class="section" id="drag-section">
+                <div class="section-header">
+                    <div class="section-icon" data-icon="weapon"></div>
+                    <div class="section-info">
+                        <h2 class="section-title">Controle de Arrasto</h2>
+                        <p class="section-description">Ajuste a sensibilidade de movimento</p>
+                    </div>
+                </div>
+                
+                <div class="drag-selector">
+                    <div class="drag-option" data-value="short">
+                        <div class="drag-icon" data-icon="aimbot"></div>
+                        <div style="flex: 1;">
+                            <h3 class="drag-title">Curto</h3>
+                            <p class="drag-description">Movimentos rápidos e precisos</p>
+                        </div>
+                        <div class="drag-radio">
+                            <input type="radio" name="drag-level" id="drag-short" value="short">
+                            <label for="drag-short"></label>
+                        </div>
+                    </div>
+                    
+                    <div class="drag-option" data-value="medium">
+                        <div class="drag-icon" data-icon="security"></div>
+                        <div style="flex: 1;">
+                            <h3 class="drag-title">Médio</h3>
+                            <p class="drag-description">Equilíbrio entre velocidade e controle</p>
+                        </div>
+                        <div class="drag-radio">
+                            <input type="radio" name="drag-level" id="drag-medium" value="medium" checked="">
+                            <label for="drag-medium"></label>
+                        </div>
+                    </div>
+                    
+                    <div class="drag-option" data-value="long">
+                        <div class="drag-icon" data-icon="misc"></div>
+                        <div style="flex: 1;">
+                            <h3 class="drag-title">Longo</h3>
+                            <p class="drag-description">Movimentos suaves e controlados</p>
+                        </div>
+                        <div class="drag-radio">
+                            <input type="radio" name="drag-level" id="drag-long" value="long">
+                            <label for="drag-long"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODO PRO PLAYER -->
+            <div class="section" id="pro-section">
+                <div class="section-header">
+                    <div class="section-icon" data-icon="security"></div>
+                    <div class="section-info">
+                        <h2 class="section-title">Modo Pro Player</h2>
+                        <p class="section-description">Configuração profissional completa</p>
+                    </div>
+                </div>
+                
+                <div class="pro-mode-container">
+                    <div class="pro-mode-card">
+                        <div class="pro-mode-header">
+                            <div class="pro-mode-icon" data-icon="security"></div>
+                            <h3 class="pro-mode-title">Pacote Profissional</h3>
+                            <label class="toggle-switch large">
+                                <input type="checkbox" id="pro-toggle">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="pro-mode-features">
+                            <div class="pro-feature">
+                                <div class="feature-icon-wrapper" data-icon="aimbot"></div>
+                                <div class="feature-content">
+                                    <h4>Mira Estável</h4>
+                                    <p>Estabilização máxima para precisão</p>
+                                </div>
+                            </div>
+                            
+                            <div class="pro-feature">
+                                <div class="feature-icon-wrapper" data-icon="misc"></div>
+                                <div class="feature-content">
+                                    <h4>Capa Leve</h4>
+                                    <p>Otimização de recursos do sistema</p>
+                                </div>
+                            </div>
+                            
+                            <div class="pro-feature">
+                                <div class="feature-icon-wrapper" data-icon="weapon"></div>
+                                <div class="feature-content">
+                                    <h4>Resposta Rápida</h4>
+                                    <p>Latência mínima e input instantâneo</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pro-mode-footer">
+                            <div class="pro-status" id="pro-status">
+                                <span class="status-indicator"></span>
+                                <span class="status-text">Desativado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INJEÇÃO -->
+            <div class="section" id="injection-section">
+                <div class="section-header">
+                    <div class="section-icon" data-icon="injection"></div>
+                    <div class="section-info">
+                        <h2 class="section-title">Sistema de Injeção</h2>
+                        <p class="section-description">Gerenciamento de injeção do sistema</p>
+                    </div>
+                </div>
+                
+                <div class="injection-container">
+                    <div class="injection-card">
+                        <div class="injection-visual">
+                            <div class="injection-circle">
+                                <div class="injection-pulse"></div>
+                                <div class="injection-icon" data-icon="injection"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="injection-content">
+                            <h3 class="injection-title">Controle de Injeção</h3>
+                            <p class="injection-description">Selecione o jogo para injetar o sistema</p>
+                            
+                            <div class="injection-buttons">
+                                <button class="btn-inject" id="inject-ff-btn" onclick="injectFreeFireNormal()">
+                                    <span class="btn-inject-icon" id="inject-ff-icon"></span>
+                                    <span class="btn-inject-text">Injetar no FF</span>
+                                </button>
+                                <button class="btn-inject" id="inject-ffmax-btn" onclick="injectFreeFireMax()">
+                                    <span class="btn-inject-icon" id="inject-ffmax-icon"></span>
+                                    <span class="btn-inject-text">Injetar no FF MAX</span>
+                                </button>
+                            </div>
+                            
+                            <div class="injection-status-area">
+                                <div class="injection-status" id="injection-status">
+                                    <span class="status-indicator"></span>
+                                    <span class="status-text">Aguardando injeção...</span>
+                                </div>
+                            </div>
+                            
+                            <div class="injection-log-wrapper">
+                                <label class="log-label">Log de Injeção:</label>
+                                <textarea id="injection-log" class="injection-log" readonly="" placeholder="Os logs de injeção aparecerão aqui..."></textarea>
+                            </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/js/icons.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/injection.js"></script>
+    <script src="assets/js/session-check.js"></script>
+
+</body>
+</html>
